@@ -1,0 +1,479 @@
+/* postavljanje osnovnih vrednosti */
+*{
+margin:0px;
+padding:0px;
+box-sizing: border-box;
+font-family:'Agency FB', arial;
+ scroll-behavior: smooth;
+}
+
+
+/* postavljanje visine navigacijonog dela, font i boju iza(sivu) */
+nav{
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 14vh;
+
+  background-image: url("../image/zaz.jpg");
+}
+
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight:bold;
+  font-size: 26px;
+}
+.nav-links a:hover{
+  color:red;
+  transition: all 0.3s ease;
+  border-top: 3px solid red;
+
+}
+.burger{
+  display: none;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+/******************************************************kraj za navigacioni deo*/
+/*postavljanje slike 1 i 2 ispod menija s parallax efektom*/
+.mainPicture1{
+  background-image: url("../image/884373.png");
+  height: 83vh;
+  }
+.mainPicture2{
+    background-image: url("../image/416319.png");
+    height: 58vh;
+  }
+  .mainPicture1, .mainPicture2{
+    border-top: 3px solid black;
+    overflow: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }
+
+  /*podesavanje javaskript animacije*/
+  #particles-js{
+    height: 20vh;
+    width: 100%;
+    border-top: 3px solid black;
+    background-color: #A80F0F;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  /*podesavanje teksta kao i bordera koji se nalazi na slici i pise "FIND AND BUY GAMES NOW!"*/
+  .ptext{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+ .ptext .border{
+   cursor:crosshair;
+   background-color: #A80F0F;
+   color: black;
+   padding: 20px;
+   border-radius: 20px;
+ }
+  /*******************************************************kraj za sliku 1 i 2 kao i tekst na slici 1*/
+
+/*postavljanje slike iza teksta O nama*/
+.text1{
+  border-top: 3px solid black;
+  background-image: url("../image/cccc.jpg");
+  text-align: center;
+  padding: 50px 80px;
+  font-size: 30px;
+}
+/*************************************************************************************kraj dela O NAMA*/
+/*postavljanje css-a za feature ikone kao i tekst*/
+#features{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 3px solid black;
+  text-align: center;
+  background-image: url("../image/zaz.jpg");
+  min-height: 18vh;
+  color: white;
+}
+/***********************************************************************************kraj dela FEATURES*/
+/*rad na games stanici.*/
+#games{
+  border-top: 3px solid black;
+  align-items: center;
+  min-height: 100vh;/*postavljanje velicine stranice da je minimum 100vh*/
+  background-image: url("../image/bg.jpg");
+
+
+}
+#games h3{
+  padding: 20px;
+  margin-left: 50px;
+  color: white;
+  font-size: 30px;
+  border-left: 3px solid red;
+}
+.wrapper{
+  margin: 0 auto;
+  padding: 50px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  grid-gap: 33px;
+}
+/*podesava se cela kocka za igrice, tu se nalazi slika pa ispod ime pa ispod link za steam i web-sajt*/
+/*.item ima svoj novi grid (grid u gridu) koji sluzi za deljenje svakog dela na slike ime i linkove*/
+.item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 40px;
+  grid-column-gap: 5px;
+  /*padding-top: 100px;*/ /*kad se ovo obrise onda vise nije na centru(PROBAJ DA OBRISES POSTO HOCU DA TU GORE PISE NESTO A DA NE BUDE SAMO PRAZNO S TOLIKIM PROSTOROM, AKO NISTA NE PISE MOZDA JE I BOLJE DA JE OBRISANO)*/
+  color:white;
+  height:325px;
+  width: 417px;
+  text-align: center;
+}
+/*kada se prevuce preko kocke malo se poveca zbog vizuelnih efekata*/
+.item:hover{
+  -webkit-transform:scale(1.1);
+    transition: transform 0.5s ease-in;
+
+}
+/*podesavanje slika svih igrica*/
+.pictureItem{
+  background-size:cover;
+  background-position: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border:3px solid red;
+  width: 422px;
+  height: 200px;
+}
+/*pojedinacno ubacivanje slika*/
+.pict1{
+  background-image: url("../image/deusx.jpg");
+}
+.pict2{
+  background-image: url("../image/reds.jpg");
+}
+.pict3{
+  background-image: url("../image/technobabylon.jpg");
+}
+.pict4{
+  background-image: url("../image/tranzistor.png");
+}
+.pict5{
+  background-image: url("../image/mirrorsedge.jpg");
+}
+.pict6{
+  background-image: url("../image/rememberme.jpg");
+}
+.pict7{
+  background-image: url("../image/ruiner.png");
+}
+.pict8{
+  background-image: url("../image/sairento.jpg");
+}
+
+.name{
+  font-size: 25px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+/*site predstavlja i web i steam, sto znaci da se odnosi za obe stvari*/
+.site{
+  background: #A80F0F;
+  border: 2px solid #A80F0F;
+  border-radius: 2px;
+  height: 35px;
+  width: 210px;
+}
+
+.web{
+  cursor: pointer;
+  background-image: url("../image/web.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.steam{
+  cursor: pointer;
+  background-image: url("../image/steam.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*kraj manipulacije sa GAMES stranicom*/
+#contact{
+  /* display:flex; ovo ce kasnije da se izbrise zato sto ne omogucava da se gore nalazi naslov "CONTACT US" */
+  border-top: 3px solid black;
+  align-items: center;
+  min-height: 90vh;
+  background-image: url("../image/opala.jpg");
+}
+#contact h3{
+  padding: 20px;
+  margin-left: 50px;
+  color: white;
+  font-size: 30px;
+  border-left: 3px solid red;
+
+}
+.contactWrapper{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  grid-gap: 5px;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "one two"
+                       "one three"
+                       "four three"
+}
+.contactItem{
+  border: 2px solid red;
+  color:white;
+  font-size: 35px;
+
+
+}
+
+.cItem1{
+background-image: url("../image/leather.jpg");
+  color: black;
+  grid-area: one;
+}
+
+.cItem2{
+  background: #A80F0F;
+  color: black;
+  grid-area: two;
+  font-weight: bold;
+  padding-top: 8%;
+}
+
+.cItem3{
+padding: 50px;
+background-image: url("../image/leather.jpg");
+grid-area: three;
+}
+.form3{
+  margin-top: 40px;
+}
+button{
+  width: 30%;
+  height: 30px;
+  background: #A80F0F;
+  border: 1px solid #A80F0F;
+  font-size: 25px;
+  font-weight: bold;
+}
+button:hover{
+  background: white;
+  transition: all 0.3s ease;
+}
+.cItem4{
+background: #A80F0F;
+color: black;
+font-weight: bold;
+grid-area: four;
+padding-top: 8%;
+}
+input{
+  width: 50%;
+}
+textarea{
+  width: 45%;
+  resize: vertical;
+  max-height: 100px;
+}
+
+input, textarea{
+  background-color: #A80F0F;
+  outline: none;
+  font-size: 25px;
+  border: 1px solid black;
+}
+input:focus, textarea:focus{
+  color:black;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 1);
+  border: 1px solid rgb(255, 0, 0);
+}
+::placeholder{
+  color: black;
+  opacity: 1;
+
+}
+
+#footer{
+  border-top: 3px solid black;
+  align-items: center;
+  min-height: 15vh;
+  background-color:#A80F0F;
+}
+
+.footerWrapper{
+  display: grid;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  grid-gap: 5px;
+  grid-template-columns:3fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footerItem{
+  color:black;
+  font-size: 26px;
+}
+
+.fItem1{
+  background-image: url("../image/insta.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.fItem2{
+  background-image: url("../image/facebook.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.fItem3{
+  background-image: url("../image/twitter.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.fItem4{
+  text-align: right;
+}
+.fItem5{
+
+}
+.fItem6{
+  text-align: left;
+}
+
+.fItem1:hover{
+  transition: all 0.4s ease;
+  border-top: 8px solid white;
+}
+.fItem2:hover{
+  transition: all 0.4s ease;
+  border-top: 8px solid black;
+}
+.fItem3:hover{
+  transition: all 0.4s ease;
+  border-top: 8px solid white;
+}
+
+
+
+
+/* povecavanje sirine naziva kategorija kada se prozor smanji na 1024px */
+@media screen and (max-width:1024px){
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+/*postavlja se display:flex na games sto ukljucuje centriranje svih igara i izgled u redovima*/
+@media screen and (max-width:948px){
+  #games{
+    display: flex;
+  }
+  #games h3{
+    display: none;
+  }
+  /*postavljanje grid-a koji se nalazi na contact stranici da ide jedan ispod drugog*/
+  .contactWrapper{
+    display:inline;
+
+  }
+
+  #contact h3{
+    display: none;
+  }
+}
+/* stvaranje tranzicije na mod telefona kada se prozor smanji na 768px(radi se u app.js (1deo) ) */
+@media screen and (max-width:768px){
+    body{
+      overflow-x: hidden;
+
+    }
+    .nav-links{
+    position:absolute;
+    right: 0px;
+    height: 92vh;
+    top: 14vh;
+    background-image: url("../image/zaz.jpg");
+    background-position: right;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    }
+
+
+    .burger{
+      display:block;
+      cursor: pointer;
+    }
+    /*kada se smanji dimenzija gubi se parallax efekat zbog optimizacije za telefone*/
+    .mainPicture1 , .mainPicture2{
+      background-attachment: scroll;
+      height:30vh;
+    }
+    /*kada se smanji dimenzija gubi se tekst na sred ekrana zato sto ne izgleda lepo*/
+    .ptext{
+      display: none;
+    }
+    /*slikice feature-ova idu u red kada se smanji dimenzija ekrana*/
+    #features{
+        flex-direction: column;
+    }
+
+}
+.nav-active{
+  transform:  translateX(0%);
+}
+/* za animaciju prelaza burger linija */
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+ opacity: 0;
+}
+.toggle .line3{
+ transform: rotate(45deg) translate(-5px,-6px);
+}
+/* *****************************kraj animacije prelaza burger linija*/
